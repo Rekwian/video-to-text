@@ -1,0 +1,22 @@
+services:
+  app:
+    restart: always
+    image: oven/bun
+    volumes:
+      - .:/app
+    ports:
+      - 9090:3000
+    working_dir: /app
+    command: ['bun', 'run', 'preview']
+  whisper:
+    restart: always
+    image: custom/whisper
+    volumes:
+      - ./whisper/app.py:/app/app.py
+    build:
+      context: ./whisper
+    ports:
+      - "8000:8000"
+
+volumes:
+  ollama_data:
