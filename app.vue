@@ -49,7 +49,9 @@ Règles à respecter :
 * La réponse doit être uniquement en HTML.
 * Les réponses doivent être justifier brievement.
 * Le contenu doit rester fidèle au texte original.
-* N'hesite pas a mettre symbole/emoji afin d'illustrer ta réecriture.`)
+* N'hesite pas a mettre symbole/emoji afin d'illustrer ta réecriture.
+* Ne lance pas d'analyse.
+* Ne fait pas de canvas.`)
 
 async function extract(event) {
   transcript.value = '';
